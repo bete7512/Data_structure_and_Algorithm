@@ -4,12 +4,14 @@ let arr = str0.split(' ').map(Number);
 // let arr = [2, 1, 1, 0, 2, 5, 4, -2, 0, 2, 8, 7, 7, 9, 2, 0, 1, 9];
 let holder = countingSort(arr);
 console.log(holder.join(' '));
+// TODO should
+//todo one more iteration 
+// let arr = [2, 1, 1, 0, 2, 5, 4, -2, 0, 2, 8, 7, 7, 9, 2, 0, 1, 9];
+// let holder = countingSort(arr);
 
 let text = "2 0 1 0 0 1 1 1 1 0 0 1 3 2 2 0 4 4 1 1 0 0 0 0 3 0 0 1 0 1 2 0 1 2 2 3 0 2 0 0 1 0 1 1 0 0 1 1 0 2 0 0 1 1 1 0 1 0 1 1 2 3 0 1 2 0 1 2 1 1 4 1 0 1 1 3 0 0 2 1 2 3 2 2 2 0 0 1 0 0 0 0 0 0 2 0 1 3 1 0";
 let arr2 = text.split(' ').map(Number);
 console.log(arr2.length);
-
-
 function countingSort(arr) {
     let array = new Array(100).fill(0);  
     for (let i=0; i<arr.length; i++){
