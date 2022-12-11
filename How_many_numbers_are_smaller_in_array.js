@@ -3,7 +3,7 @@
  * @return {number[]}
  */
 var smallerNumbersThanCurrent = function(nums) {
-    arr = []
+   let arr = []
     nums.map((elem)=>{
         counter = 0,
         nums.forEach((e)=>{
