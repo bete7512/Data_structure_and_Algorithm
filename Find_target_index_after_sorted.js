@@ -12,6 +12,8 @@ var targetIndices = function(nums,target) {
             holder.push(i)
         }
     }
-    console.log(holder)
     return holder
 };
+
+let test = targetIndices([1,2,5,2,3], 3)
+console.log(test);

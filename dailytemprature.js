@@ -4,35 +4,22 @@
  */
 var dailyTemperatures = function (temperatures) {
     let result = new Array(temperatures.length).fill(0);
-    for (let i = 0; i < temperatures.length; i++) {
-        let temp = temperatures[i];
-        if (temp < temperatures[i + 1]) {
+    for (let i = 0; i < temperatures.length; i++){
+        if (temperatures[i] < temperatures[i + 1]){
             result[i] += 1
         }
-        else {
-            let j = i;
-            if (j == temperatures.length - 1) {
-                console.log("from zero", i);
-                result[i] = 0;
-                break
+        else{
+            let j = temperatures.indexOf(temperatures[i]);
+            console.log(j);
+            let test = 0
+            while (temperatures[i] >= temperatures[j]){
+                console.log("paired",temperatures[i],temperatures[j]);
+                test = test + 1
+                j++;
             }
-            let notYet = true;
-            console.log("sth",temperatures[j],i);
-            console.log("sth",temp,i);
-            while (temperatures[j] >= temp) {
-                // console.log("am here", j);
-                // ++j;
-                // if (temperatures[j] <= temp) {
-                //     result[i]++;
-                // }
-                // else {
-                //     result[i]++;
-                //     notYet = false;
-                // }
-                // result[i]++
-                j++
-            }
-            result[i] = temperatures[i]-temperatures[j]
+            console.log("tests",test);
+            result[i] = test;
+            // result[i] = temperatures[i]-temperatures[j]
         }
     }
     return result;
