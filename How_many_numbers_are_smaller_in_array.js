@@ -1,12 +1,12 @@
 /**
- * @param {number[]} nums
+ * @param {number[]} numbs
  * @return {number[]}
  */
-var smallerNumbersThanCurrent = function(nums) {
+var smallerNumbersThanCurrent = function(numbs) {
    let arr = []
-    nums.map((elem)=>{
+    numbs.map((elem)=>{
         counter = 0,
-        nums.forEach((e)=>{
+        numbs.forEach((e)=>{
             if(elem>e){
                 counter++
             }
